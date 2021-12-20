@@ -19,7 +19,7 @@ contract("Token Test", async (accounts) => {
         // let balance = await instance.balanceOf(accounts[0]);
         // assert.equal(balance.valueOf(), initalSupply.valueOf(), "the balance was not the same")
         //it is better to use expect because it is more readable
-        expect(await instance.balanceOf(accounts[0])).to.be.bignumber.equal(totalSupply);
+        expect(instance.balanceOf(accounts[0])).to.eventually.be.bignumber.equal(totalSupply);
         //to run the test run truffle developer then then type test
     })
 })
